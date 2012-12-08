@@ -33,7 +33,6 @@
 ###############################################################################
 
 (
-
 # No error checking for the following 2 variables.
 preference=female    # preference can be male or female.
 threshold=25         # threshold can be any percentage value you want to set.
