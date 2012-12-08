@@ -11,6 +11,9 @@
 #                a warning sound and displays a popup as soon as the          #
 #                battery level falls below the defined threshold.             #
 #                                                                             #
+#                Add this script to the startup applications and it will      #
+#                work just fine.                                              #
+#                                                                             #
 #                Default voice:     female (Acceptable value: male, female)   #
 #                Default threshold: 25%    (Acceptable value: 0-100%)         #
 #                                                                             #
