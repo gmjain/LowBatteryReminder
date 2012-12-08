@@ -7,30 +7,7 @@
 #                                                                             #
 # Pre-requisites: acpi, vlc, alsa-utils, libnotify                            #
 #                                                                             #
-# About Program: This script runs in the background as a daemon and plays     #
-#                a warning sound and displays a popup as soon as the          #
-#                battery level falls below the defined threshold.             #
-#                                                                             #
-#                It will increase the sound volume to 90%, play the           #
-#                warning and restore the original sound volume. It also       #
-#                works if the sound is muted.                                 #
-#                                                                             #
-#                Add this script to the startup applications and it will      #
-#                work just fine.                                              #
-#                                                                             #
-#                Default voice:     female (Acceptable value: male, female)   #
-#                Default threshold: 25%    (Acceptable value: 0-100%)         #
-#                                                                             #
-#                To change these values, edit the variables at the beginning  #
-#                of the script.                                               #
-#                                                                             #
-#                To stop the script, simply kill it from the terminal.        #
-#                You can also use the kill-script.sh provided. It does the    #
-#                same thing.                                                  #
-#                                                                             #
-#                Make sure that the 4 files are always present in the folder: #
-#                warning_male.wav, warning_female.wav, kill-script.sh, README #
-#                & low-bat.sh              .                                  #
+# About: Refer the README file                                                #
 #                                                                             #
 # License: Do whatever you want to with this script.                          #
 #          NO WARRANTY IS PROVIDED.                                           #
@@ -38,13 +15,13 @@
 ###############################################################################
 
 (
-# No error checking for the following 2 variables.
-preference=female    # preference can be male or female.
-threshold=25         # threshold can be any percentage value you want to set.
-
 # Do NOT modify these 3 variables.
 path_to_script=`readlink -f $0`
 dir_to_script=`dirname $path_to_script`
+
+# Sourcing the settings file.
+. $dir_to_script/settings.conf
+
 path_to_wav="$dir_to_script/warning_$preference.wav"
 
 while :
