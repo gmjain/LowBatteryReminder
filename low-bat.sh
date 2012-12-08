@@ -11,6 +11,10 @@
 #                a warning sound and displays a popup as soon as the          #
 #                battery level falls below the defined threshold.             #
 #                                                                             #
+#                It will increase the sound volume to 90%, play the           #
+#                warning and restore the original sound volume. It also       #
+#                works if the sound is muted.                                 #
+#                                                                             #
 #                Add this script to the startup applications and it will      #
 #                work just fine.                                              #
 #                                                                             #
