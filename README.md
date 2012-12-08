@@ -30,7 +30,7 @@ Gaurav Jain (grvmjain@gmail.com)
 
 ## License ##
 
-   Do whatever you want to with this script. Covered under GNU-GPL v3.0.
-   NO WARRANTY IS PROVIDED.
-   More info at http://www.gnu.org/licenses/gpl.txt
+    Do whatever you want to with this script. Covered under GNU-GPL v3.0.
+    NO WARRANTY IS PROVIDED.
+    More info at http://www.gnu.org/licenses/gpl.txt
 
