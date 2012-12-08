@@ -25,6 +25,8 @@
 #                of the script.                                               #
 #                                                                             #
 #                To stop the script, simply kill it from the terminal.        #
+#                You can also use the kill-script.sh provided. It does the    #
+#                same thing.                                                  #
 #                                                                             #
 #                Make sure that the 4 files are always present in the folder: #
 #                warning_male.wav,                                            #
