@@ -50,12 +50,12 @@ path_to_wav="$dir_to_script/warning_$preference.wav"
 while :
 do
     acpi_out=`acpi -b`
-    bat_remaining=`echo $acpi_out | awk -F'[ %]' '{print $4}'`
 
     # power_stat will store whether battery is [C]harging or [D]ischarging.
     power_stat=`echo $acpi_out | awk '{print $3}' | cut -c1`
     if [ "$power_stat" = 'D' ]
     then
+        bat_remaining=`echo $acpi_out | awk -F'[ %]' '{print $4}'`
         if [ $bat_remaining -lt $threshold ]
         then
             # Extract current sound volume percentage or whether it is muted.
