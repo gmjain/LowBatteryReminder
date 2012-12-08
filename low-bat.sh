@@ -29,9 +29,8 @@
 #                same thing.                                                  #
 #                                                                             #
 #                Make sure that the 4 files are always present in the folder: #
-#                warning_male.wav,                                            #
-#                warning_female.wav,                                          #
-#                README & the script itself.                                  #
+#                warning_male.wav, warning_female.wav, kill-script.sh, README #
+#                & low-bat.sh              .                                  #
 #                                                                             #
 # License: Do whatever you want to with this script.                          #
 #          NO WARRANTY IS PROVIDED.                                           #
