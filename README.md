@@ -7,6 +7,9 @@ increase the sound volume to 90%, play the warning and restore the original
 sound volume. It also works if the sound is muted. It features a male as well as
 a female voice.
 
+    Update: (Bug) The sound volume modification works only when connected to external
+    speakers. Looking into it right now.
+
 ## Pre-requisites ##
 
 Make sure that you have acpi, vlc, alsa-utils and libnotify installed.
