@@ -9,7 +9,7 @@ a female voice.
 
 ## Pre-requisites ##
 
-Make sure that you have acpi, vlc, alsa-utils and libnotify installed.
+Make sure that you have acpi, alsa-utils and libnotify installed.
 
 ## Usage ##
 
