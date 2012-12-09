@@ -5,7 +5,7 @@
 # Author:  Gaurav Jain                                                        #
 # Contact: grvmjain@gmail.com                                                 #
 #                                                                             #
-# Pre-requisites: acpi, alsa-utils, libnotify                            #
+# Pre-requisites: acpi, alsa-utils, libnotify                                 #
 #                                                                             #
 # About: Refer the README file                                                #
 #                                                                             #
