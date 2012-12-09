@@ -26,6 +26,9 @@ path_to_wav="$dir_to_script/warning_$preference.wav"
 
 while :
 do
+    command -v acpi >/dev/null 2>&1 ||
+    { echo >&2 "'acpi' is not installed. Aborting."; exit 1; }
+
     acpi_out=`acpi -b`
 
     # power_stat will store whether battery is [C]harging or [D]ischarging.
