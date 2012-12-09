@@ -14,10 +14,9 @@
 #          More info at http://www.gnu.org/licenses/gpl.txt                   #
 ###############################################################################
 
-(
 command -v acpi >/dev/null 2>&1 ||
 { echo >&2 "'acpi' is not installed. Aborting."; exit 1; }
-
+(
 # Do NOT modify these 3 variables.
 path_to_script=`readlink -f $0`
 dir_to_script=`dirname $path_to_script`
