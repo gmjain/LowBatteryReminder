@@ -5,7 +5,7 @@
 # Author:  Gaurav Jain                                                        #
 # Contact: grvmjain@gmail.com                                                 #
 #                                                                             #
-# Pre-requisites: acpi, vlc, alsa-utils, libnotify                            #
+# Pre-requisites: acpi, alsa-utils, libnotify                            #
 #                                                                             #
 # About: Refer the README file                                                #
 #                                                                             #
@@ -40,24 +40,22 @@ do
             amixer_level=`echo $amixer_out | awk -F"[][]" '{print $2}'`
             amixer_status=`echo $amixer_out | awk -F"[][]" '{print $6}'`
 
+            echo $amixer_level $amixer_status
+
             # Set the sound volume to 100%
-            amixer set Master 90% on
-            amixer set Headphone 100% on
+            amixer set Master 90% unmute
+            amixer set Headphone unmute
+            amixer set Speaker unmute
+            amixer set PCM 100% unmute
 
             # Send Gnome-Notification warning.
             notify-send -u critical "Battery Remaining: $bat_remaining%"
 
             # Play warning sound.
-            cvlc $path_to_wav&
-            sleep 4
-
-            # Kill the warning sound vlc process.
-            kill `ps aux | grep warning_$preference |
-                  grep vlc | awk '{print $2}'`
+            aplay -q $path_to_wav
 
             # Restore the extracted sound volume and status.
             amixer set Master $amixer_level $amixer_status
-            amixer set Headphone $amixer_status
         fi
         sleep 120    # Sleep for 2 minutes if battery-low and still discharging.
     else

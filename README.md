@@ -7,9 +7,6 @@ increase the sound volume to 90%, play the warning and restore the original
 sound volume. It also works if the sound is muted. It features a male as well as
 a female voice.
 
-    Update: (Bug) The sound volume modification works only when connected to external
-    speakers. Looking into it right now.
-
 ## Pre-requisites ##
 
 Make sure that you have acpi, vlc, alsa-utils and libnotify installed.
@@ -25,6 +22,13 @@ applications and it should work just fine.
 
 To stop the script, simply kill it from the terminal. You can also use the
 kill-script.sh provided. It basically does the same thing.
+
+## Known Bugs ##
+    
+    Update 2: Fixed the bug mentioned in Update 1. No bugs as of now.
+    
+    Update 1: (Bug) The sound volume modification works only when connected to external
+    speakers. Looking into it right now.
 
 ## Contact ##
 
