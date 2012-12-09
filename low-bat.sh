@@ -40,13 +40,11 @@ do
             amixer_level=`echo $amixer_out | awk -F"[][]" '{print $2}'`
             amixer_status=`echo $amixer_out | awk -F"[][]" '{print $6}'`
 
-            echo $amixer_level $amixer_status
-
             # Set the sound volume to 100%
-            amixer set Master 90% unmute
-            amixer set Headphone unmute
-            amixer set Speaker unmute
-            amixer set PCM 100% unmute
+            amixer set Master 90% unmute > /dev/null
+            amixer set Headphone unmute > /dev/null
+            amixer set Speaker unmute > /dev/null
+            amixer set PCM 100% unmute > /dev/null
 
             # Send Gnome-Notification warning.
             notify-send -u critical "Battery Remaining: $bat_remaining%"
@@ -55,7 +53,7 @@ do
             aplay -q $path_to_wav
 
             # Restore the extracted sound volume and status.
-            amixer set Master $amixer_level $amixer_status
+            amixer set Master $amixer_level $amixer_status > /dev/null
         fi
         sleep 120    # Sleep for 2 minutes if battery-low and still discharging.
     else
